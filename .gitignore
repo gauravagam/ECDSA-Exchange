@@ -3,3 +3,6 @@ dist
 !.gitignore
 *.lock
 /node_modules
+*.mdb
+./package-lock.json
+package-lock.json
