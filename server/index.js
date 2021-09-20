@@ -34,7 +34,11 @@ app.get("/getPrivateKey/:publicKey", async (req,res)=>{
   const { publicKey = "" } = req.params;
   console.log('inside getPrivateKey ',publicKey);
   const account = accounts.find((account)=>account.publicKey===publicKey);
-  res.send({privateKey: account.privateKey});
+  if(account){
+    res.send({privateKey: account.privateKey});
+  } else {
+    res.send({message: "private key not found"})
+  }
 });
 
 app.listen(port, () => {
