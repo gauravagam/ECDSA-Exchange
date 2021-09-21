@@ -9,7 +9,7 @@ const keyGenerater = require('./generate-keys');
 app.use(cors());
 app.use(express.json());
 
-const balances = {
+let balances = {
   // "1": 100,
   // "2": 50,
   // "3": 75,
